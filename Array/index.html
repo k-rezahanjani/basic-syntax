@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Basic Syntax</title>
+</head>
+<body>
+    <form id="formOfRegister">
+        <label class="lbl">Name:</label><br>
+        <input type="text" id="input" placeholder="Enter your name" required><br>
+
+        <label class="lbl">Age :</label><br>
+        <input type="number" id="age" required><br>
+
+        <button type="submit" id="submitBtn" onclick="getData(event)">Save</button>
+        <button type="submit" id="showBtn" onclick="showData(event)">Show</button>
+
+    </form>
+
+    <div id="preview" style="margin-top: 40px; margin-left: 10px"></div>
+
+<script src="script.js" type="text/javascript"></script>
+</body>
+</html>
