@@ -1,39 +1,28 @@
-var input = document.getElementById('input').value;
-var age = document.getElementById("age").value
+// Create an Array #1
+var numbers = new Array()
+numbers[0] = 1
+numbers[1] = 2
+numbers[2] = 3
+numbers[3] = 4
+numbers[4] = 5
 
-var userData = []
+// Create an Array #2
+var names = ["kaveh","kiarash"]
 
-function getData(e){
-   e.preventDefault()
-    let addData = {
-        id : Date.now(),
-        name : document.getElementById('input').value,
-        age : document.getElementById("age").value
-    }
+// push it to the end of the Array
+names.push("mohammad")
 
-    userData.push(addData)
-    document.querySelector('form').reset()
-    if(input !== "" && age !== "" || input !== " " && age !== " ")
-    {
-        console.log('added', {userData})
-        let pre = document.querySelector('#preview ')
-        // alert("Your data has been saved : " + pre)
-        localStorage.setItem("List",JSON.stringify(userData) );
-    }else
-    {
-        alert("Please fill the blanks")
-    }
+// Delete the last array index
+names.pop()
 
+// Delete an array using index
+delete names[0]
 
-  }
+// find an array
+names.find(name => name == "mohammad") // return Mohammad
+names.find(name => name == "danial") // return undefined, means there is no danial in array
 
-function showData(even) {
-    even.preventDefault()
-    var getItems = Object.values(localStorage)
-    for(var i of getItems)
-    {
-        document.getElementById('preview').innerHTML += getItems
-    }
-}
-
-
+// findindex : if the value exists in Array , return 1 , otherwise -1
+const result = names.findIndex(name => name == "kiarash")
+// return -1
+const result2 = names.findIndex(name => name == "mohsen")
