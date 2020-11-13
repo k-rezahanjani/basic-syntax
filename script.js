@@ -1,4 +1,4 @@
-// Create the Class
+// Create the Class OOP
 class student {
     constructor (name,family,age,bornIn) {
         this.name = name
@@ -45,7 +45,5 @@ var newPerson = class person {
     showPersonInfo () {
         console.log("My full name is : " + this.firstname + " " + this.lastname
                     + " and I am " + this.age + " years old!")
-
     }
-
 }
